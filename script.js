@@ -1,20 +1,23 @@
 const quotes = [
-    "Believe you can and you're halfway there. – Theodore Roosevelt",
-    "The only way to do great work is to love what you do. – Steve Jobs",
-    "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
-    "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
-    "The future depends on what you do today. – Mahatma Gandhi",
-    "It always seems impossible until it's done. – Nelson Mandela"
+    "Stay positive, work hard, make it happen.",
+    "Believe you can and you're halfway there.",
+    "Success is not final; failure is not fatal.",
+    "Your only limit is your mind.",
+    "Push yourself, because no one else is going to do it for you.",
+    "Great things never come from comfort zones.",
+    "Dream it. Wish it. Do it.",
+    "Don’t stop when you’re tired. Stop when you’re done."
   ];
 
-  const quoteBox = document.getElementById('quote-box');
-
-  let index = 0;
-
-  function showQuote() {
-    quoteBox.textContent = quotes[index];
-    index = (index + 1) % quotes.length;
+  function changeQuote() {
+    const quoteText = document.getElementById("quoteText");
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteText.textContent = quotes[randomIndex];
   }
 
-  showQuote(); // Show initial quote
-  setInterval(showQuote, 5000); 
+  // Show a quote immediately
+  window.onload = function () {
+    changeQuote();
+    // Change quote every 5 seconds
+    setInterval(changeQuote, 5000);
+  };
