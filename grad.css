@@ -1,0 +1,51 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://wallpapers.com/images/hd/cute-pink-aesthetic-strawberry-desktop-7dsg62ivqfgck1bk.jpg");
+  background: #f7f7f7;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  background: rgb(236, 122, 166);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: #ff008c;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  border-radius: 5px 5px 0 0;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+tbody tr:hover {
+  background: #ffe0fb;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #fbdeff;
+}

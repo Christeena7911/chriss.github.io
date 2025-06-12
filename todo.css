@@ -1,0 +1,99 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url("https://img.freepik.com/free-vector/flat-abstract-doodle-background_23-2149336498.jpg?semt=ais_hybrid&w=740");
+  background: #f5f5f5;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Main App Area */
+.todo-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Input and Add Button */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+#add-task {
+  padding: 10px 20px;
+  background: #ff96ed;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#add-task:hover {
+  background: #fc77c4;
+}
+
+/* Task List */
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.task-item:hover {
+  background: #f9f9f9;
+}
+
+/* Completed Task Style */
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Delete Button */
+.task-item button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-item button:hover {
+  background: #c82333;
+}

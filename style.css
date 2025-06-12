@@ -1,0 +1,28 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("https://img.freepik.com/free-photo/top-view-arrangement-flowers_23-2149077423.jpg?semt=ais_hybrid&w=740");
+      background: #fcb6e4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1{
+        font-family: fantasy;
+        color: #5a0537;
+    }
+    h2{
+        font-family: fantasy;
+        color: #a50f66;
+    }
+    #quote-box {
+      background: #f8c5e3;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 600px;
+      font-size: 1.5em;
+      color: #333;
+    }

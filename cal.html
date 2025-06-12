@@ -1,0 +1,33 @@
+<html>
+    <head><link rel="stylesheet" href="cal.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <h1>Calendar Reminder</h1>
+    
+    <div class="controls">
+      <select id="month-select"></select>
+      <select id="year-select"></select>
+    </div>
+
+    <table id="calendar">
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th>
+          <th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="reminder-box">
+      <h2 id="selected-date">Select a date</h2>
+      <textarea id="reminder-input" placeholder="Add your reminder here..."></textarea>
+      <button id="save-reminder">Save Reminder</button>
+      <div id="reminder-output"></div>
+    </div>
+  </div>
+
+  <script src="cal.js"></script>
+</body>
+</html>
