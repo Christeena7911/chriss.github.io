@@ -1,62 +1,58 @@
-let timerDisplay = document.getElementById('timer');
-let startBtn = document.getElementById('start');
-let pauseBtn = document.getElementById('pause');
-let resetBtn = document.getElementById('reset');
-let pomodoroBtn = document.getElementById('pomodoro');
-let shortBreakBtn = document.getElementById('short-break');
-
-let interval;
+let timer;
+let timeLeft = 25 * 60; // default Pomodoro: 25 minutes
 let isRunning = false;
-let timeLeft = 25 * 60; // default to 25 minutes
 
-function updateDisplay() {
-  let minutes = Math.floor(timeLeft / 60);
-  let seconds = timeLeft % 60;
-  timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+const timerDisplay = document.getElementById("timer");
+const startBtn = document.getElementById("start");
+const pauseBtn = document.getElementById("pause");
+const resetBtn = document.getElementById("reset");
+const shortBreakBtn = document.getElementById("short-break");
+
+function updateTimerDisplay() {
+  const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+  const seconds = String(timeLeft % 60).padStart(2, '0');
+  timerDisplay.textContent = `${minutes}:${seconds}`;
 }
 
 function startTimer() {
-  if (isRunning) return;
-  isRunning = true;
-  interval = setInterval(() => {
-    if (timeLeft > 0) {
-      timeLeft--;
-      updateDisplay();
-    } else {
-      clearInterval(interval);
-      isRunning = false;
-      alert("Time's up!");
-    }
-  }, 1000);
+  if (!isRunning) {
+    isRunning = true;
+    timer = setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        updateTimerDisplay();
+      } else {
+        clearInterval(timer);
+        alert("Time's up! Take a break.");
+        isRunning = false;
+      }
+    }, 1000);
+  }
 }
 
 function pauseTimer() {
-  clearInterval(interval);
+  clearInterval(timer);
   isRunning = false;
 }
 
 function resetTimer() {
-  pauseTimer();
+  clearInterval(timer);
   timeLeft = 25 * 60;
-  updateDisplay();
+  updateTimerDisplay();
+  isRunning = false;
 }
 
-function setPomodoro() {
-  pauseTimer();
-  timeLeft = 25 * 60;
-  updateDisplay();
-}
-
-function setShortBreak() {
-  pauseTimer();
+function startShortBreak() {
+  clearInterval(timer);
   timeLeft = 5 * 60;
-  updateDisplay();
+  updateTimerDisplay();
+  isRunning = false;
 }
 
-startBtn.addEventListener('click', startTimer);
-pauseBtn.addEventListener('click', pauseTimer);
-resetBtn.addEventListener('click', resetTimer);
-pomodoroBtn.addEventListener('click', setPomodoro);
-shortBreakBtn.addEventListener('click', setShortBreak);
+startBtn.addEventListener("click", startTimer);
+pauseBtn.addEventListener("click", pauseTimer);
+resetBtn.addEventListener("click", resetTimer);
+shortBreakBtn.addEventListener("click", startShortBreak);
 
-updateDisplay();
+// Initial display
+updateTimerDisplay();
