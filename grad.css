@@ -1,19 +1,14 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url("https://wallpapers.com/images/hd/cute-pink-aesthetic-strawberry-desktop-7dsg62ivqfgck1bk.jpg");
-  background: #f7f7f7;
+  background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMTMtcC0wMDAxYV8yLWtzaTg2cXlmLmpwZw.jpg");
   margin: 0;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
+  padding: 0;
+  background-color: pink;
+  font-family: Arial, sans-serif;
 }
-
 .container {
   max-width: 500px;
   width: 100%;
-  background: rgb(236, 122, 166);
+  background: rgba(236, 122, 166, 0.539);
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -42,10 +37,10 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:hover {
-  background: #ffe0fb;
+  background: #f972e7;
 }
 
 tbody td {
   padding: 12px;
-  border-bottom: 1px solid #fbdeff;
+  border-bottom: 1px solid #ef7dcb;
 }
